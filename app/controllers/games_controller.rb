@@ -34,3 +34,14 @@ class GamesController < ApplicationController
   input.chars.all? { |i| input.count(i) <= letters.split.count(i) }
   end
 end
+
+# tambien se puede hacer la included? así
+# def included?(input, letters)
+#   is_included = true
+#   input.chars.each do |i|
+#     if input.count(i) > letters.split.count(i)
+#       is_included = false
+#     end
+#   end
+#   return is_included
+#   end
